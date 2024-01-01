@@ -4,8 +4,9 @@
 "" Base Settings
 "" ========================================================
 
-set scrolloff=10
-set linenumber
+set scrolloff=5
+set relativenumber
+set number
 set showmode
 set showcmd
 
@@ -26,11 +27,11 @@ let mapleader = " "
 
 set surround
 set highlightedyank
-set sneak
+###set sneak
 set nerdtree
 
 " Easymotion settings
-set easymotion
+###set easymotion
 set notimeout
 
 " Which-key settings
@@ -110,16 +111,21 @@ let g:WhichKeyDesc_errors_prev = "<leader>ep Go to previous error in solution"
 "" ========================================================
 
 inoremap jk <Esc>
+inoremap kj <Esc>
+
+" Move up and down
+nnoremap J 5j
+nnoremap K 5k
 
 " Tab navigation
-nnoremap <A-n> :tabnext<CR>
-nnoremap <A-p> :tabprev<CR>
+nnoremap <C-n> :tabnext<CR>
+nnoremap <C-m> :tabprev<CR>
 
 " Pane navigation
-nnoremap <A-h> <C-w>h
-nnoremap <A-l> <C-w>l
-nnoremap <A-k> <C-w>k
-nnoremap <A-j> <C-w>j
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
 
 " Jump between methods
 nnoremap [[ <Action>(MethodUp)
@@ -140,11 +146,17 @@ inoremap <C-k> <Action>(PopupMenu-selectPrev)
 "" Leader commands
 "" ========================================================
 
+" Remove highlight
+map <leader>/ :noh<CR>
+
+" Join lines
+nnoremap <leader>j J
+
 " Comment lines
 map <leader>c <action>(CommentByLineComment)
 
 " Jump around with easymotion
-map <leader>j <Plug>(easymotion-s)
+"""map <leader>j <Plug>(easymotion-s)
 
 " Open NERDTree (use q to exit)
 map <leader>x :NERDTreeToggle<CR>
@@ -154,10 +166,10 @@ map <leader>zc :action CollapseAllRegions<CR>
 map <leader>zo :action ExpandAllRegions<CR>
 
 " Window splits
-map <leader>wv <Action>(SplitVertically)
-map <leader>ws <Action>(SplitHorizontally)
-map <leader>wu <Action>(Unsplit)
-map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+map <leader>lv <Action>(SplitVertically)
+map <leader>ls <Action>(SplitHorizontally)
+map <leader>lu <Action>(Unsplit)
+map <leader>lm <Action>(MoveEditorToOppositeTabGroup)
 
 " Display options
 map <leader>dd <action>(ToggleDistractionFreeMode)
