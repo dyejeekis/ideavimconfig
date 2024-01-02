@@ -10,6 +10,7 @@ set number
 set showmode
 set showcmd
 
+set ignorecase
 set smartcase
 set incsearch
 set hlsearch
@@ -146,14 +147,18 @@ inoremap <C-k> <Action>(PopupMenu-selectPrev)
 "" Leader commands
 "" ========================================================
 
-" Remove highlight
-map <leader>/ :noh<CR>
-
 " Join lines
 nnoremap <leader>j J
 
-" Comment lines
+" Remove highlight
+map <leader>/ :noh<CR>
+
+" Open register
+map <leader>' :reg<CR>
+
+" Comment
 map <leader>c <action>(CommentByLineComment)
+map <leader>C <action>(CommentByBlockComment)
 
 " Jump around with easymotion
 """map <leader>j <Plug>(easymotion-s)
@@ -177,19 +182,30 @@ map <leader>dz <action>(ToggleZenMode)
 map <leader>df <action>(ToggleFullScreen)
 
 " Actions
-map <leader>am <action>(ShowIntentionActions)
-map <leader>as <action>(SearchEverywhere)
+"""map <leader>am <action>(ShowIntentionActions)
+"""map <leader>as <action>(SearchEverywhere)
 
 " File navigation
-map <leader>ff <action>(GotoFile)
-map <leader>fr <action>(RecentFiles)
-map <leader>fc <action>(FindInPath)
+map <leader>ef <action>(GotoFile)
+map <leader>er <action>(RecentFiles)
+map <leader>ec <action>(FindInPath)
 map <leader><leader> <Action>(RecentFiles)
-map <leader>fl <action>(RecentLocations)
-map <leader>fs <action>(NewScratchFile)
+map <leader>el <action>(RecentLocations)
+map <leader>es <action>(NewScratchFile)
 
-" Close active tab
-map <leader>q <action>(CloseContent)
+" Focus window (todo)
+map <leader>fs <action>(SearchEverywhere)
+
+" Close editors
+"""map <leader>q <action>(CloseContent)
+map <leader>ww <action>(CloseActiveTab)
+map <leader>wa <action>(CloseAllEditors)
+map <leader>wo <action>(CloseAllEditorsButActive)
+map <leader>wu <action>(ReopenClosedTab)
+map <leader>wg <action>(CloseEditorsGroup)
+
+" Selecting (todo)
+"""map <leader>sa <action>()
 
 " Refactoring
 map <leader>rn <Action>(RenameElement)
@@ -201,8 +217,9 @@ map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 
 " Go to code
 nmap <leader>gd <Action>(GotoDeclaration)
-nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gp <Action>(GotoTypeDeclaration)
 nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gy <Action>(GotoSymbol)
 nmap <leader>gu <Action>(ShowUsages)
 nmap <leader>gt <Action>(GotoTest)
 nmap <leader>gf <Action>(Back)
@@ -214,6 +231,6 @@ map <leader>gs <Action>(ActivateVersionControlToolWindow)
 map <leader>gb <Action>(Git.Branches)
 
 " Errors
-map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
-map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
+"""map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
+"""map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
 
