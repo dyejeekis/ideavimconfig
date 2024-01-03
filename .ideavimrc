@@ -180,15 +180,16 @@ map <leader>lu <Action>(Unsplit)
 map <leader>lm <Action>(MoveEditorToOppositeTabGroup)
 
 " Display options
-map <leader>dd <action>(ToggleDistractionFreeMode)
-map <leader>dz <action>(ToggleZenMode)
-map <leader>df <action>(ToggleFullScreen)
+map <leader>pd <action>(ToggleDistractionFreeMode)
+map <leader>pz <action>(ToggleZenMode)
+map <leader>pf <action>(ToggleFullScreen)
 
 " Actions (todo, like run debug etc)
 map <leader>am <action>(ShowIntentionActions)
 map <leader>as <action>(SearchEverywhere)
 map <leader>ar <action>(Run)
 map <leader>ad <action>(Debug)
+map <leader>ap <action>(Stop)
 
 " File navigation
 map <leader>ef <action>(GotoFile)
@@ -198,7 +199,7 @@ map <leader><leader> <Action>(RecentFiles)
 map <leader>el <action>(RecentLocations)
 map <leader>es <action>(NewScratchFile)
 
-" Focus window (todo)
+" Focus window
 map <leader>fs <action>(SearchEverywhere)
 map <leader>ff <action>(FindInPath)
 map <leader>ft <action>(ActivateTerminalToolWindow)
@@ -239,10 +240,32 @@ nmap <leader>gt <Action>(GotoTest)
 nmap <leader>gf <Action>(Back)
 nmap <leader>gb <Action>(Forward)
 
-" Git windows
+" Bookmarks
+map <leader>ba <action>(Bookmarks)
+map <leader>bs <action>(ShowBookmarks)
+map <leader>bb <Action>(ToggleBookmark)
+map <leader>bn <Action>(GotoNextBookmark)
+map <leader>bm <Action>(GotoPreviousBookmark)
+
+" Git
+map <leader>gv <Action>(ActivateVersionControlToolWindow)
 map <leader>gc <Action>(CheckinProject)
-map <leader>gs <Action>(ActivateVersionControlToolWindow)
 map <leader>gb <Action>(Git.Branches)
+map <leader>gs <Action>(Vcs.Show.Shelf)
+map <leader>gg <Action>(Vcs.RollbackChangedLines)
+map <leader>gr <Action>(Git.Reset)
+"""map <leader>gd <Action>(ChangesView.Diff)
+
+" Debug
+map <leader>dd <Action>(ToggleLineBreakpoint)
+map <leader>da <Action>(ActivateDebugToolWindow)
+map <leader>dv <Action>(ViewBreakpoints)
+map <leader>dr <Action>(Resume)
+map <leader>do <Action>(StepOver)
+map <leader>di <Action>(StepInto)
+map <leader>du <Action>(StepOut)
+"""map <leader>dm <Action>(MuteBreakpoints)
+"""map <leader>df <Action>(FocusOnBreakpoint)
 
 " Errors
 """map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
