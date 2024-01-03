@@ -36,7 +36,7 @@ set nerdtree
 set notimeout
 
 " Which-key settings
-set which-key
+"""set which-key
 let g:WhichKey_FontSize = 16
 let g:WhichKey_CommandColor = "#41ead4"
 let g:WhichKey_PrefixColor = "#f335b2"
@@ -160,6 +160,9 @@ map <leader>' :reg<CR>
 map <leader>c <action>(CommentByLineComment)
 map <leader>C <action>(CommentByBlockComment)
 
+" Hide window
+map <leader>h <action>(HideActiveWindow)
+
 " Jump around with easymotion
 """map <leader>j <Plug>(easymotion-s)
 
@@ -181,9 +184,11 @@ map <leader>dd <action>(ToggleDistractionFreeMode)
 map <leader>dz <action>(ToggleZenMode)
 map <leader>df <action>(ToggleFullScreen)
 
-" Actions
-"""map <leader>am <action>(ShowIntentionActions)
-"""map <leader>as <action>(SearchEverywhere)
+" Actions (todo, like run debug etc)
+map <leader>am <action>(ShowIntentionActions)
+map <leader>as <action>(SearchEverywhere)
+map <leader>ar <action>(Run)
+map <leader>ad <action>(Debug)
 
 " File navigation
 map <leader>ef <action>(GotoFile)
@@ -195,6 +200,15 @@ map <leader>es <action>(NewScratchFile)
 
 " Focus window (todo)
 map <leader>fs <action>(SearchEverywhere)
+map <leader>ff <action>(FindInPath)
+map <leader>ft <action>(ActivateTerminalToolWindow)
+map <leader>fl <action>(ActivateLogcatToolWindow)
+map <leader>fe <action>(ActivateProjectToolWindow)
+map <leader>fg <action>(ActivateVersionControlToolWindow)
+map <leader>fd <action>(ActivateDebugToolWindow)
+map <leader>ft <action>(ActivateBuildVariantsToolWindow)
+map <leader>fp <action>(ActivateAndroidProfilerToolWindow)
+map <leader>fc <action>(CommanderPopupMenu)
 
 " Close editors
 """map <leader>q <action>(CloseContent)
@@ -204,10 +218,10 @@ map <leader>wo <action>(CloseAllEditorsButActive)
 map <leader>wu <action>(ReopenClosedTab)
 map <leader>wg <action>(CloseEditorsGroup)
 
-" Selecting (todo)
+" Select (todo)
 """map <leader>sa <action>()
 
-" Refactoring
+" Refactor
 map <leader>rn <Action>(RenameElement)
 map <leader>rm <Action>(ExtractMethod)
 map <leader>rv <Action>(IntroduceVariable)
