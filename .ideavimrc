@@ -16,6 +16,7 @@ set incsearch
 set hlsearch
 
 set visualbell
+set ideavimsupport=
 
 " Use system clipboard
 set clipboard+=unnamed   
@@ -202,6 +203,7 @@ map <leader>es <action>(NewScratchFile)
 " Focus window
 map <leader>fs <action>(SearchEverywhere)
 map <leader>ff <action>(FindInPath)
+map <leader>fr <action>(ReplaceInPath)
 map <leader>ft <action>(ActivateTerminalToolWindow)
 map <leader>fl <action>(ActivateLogcatToolWindow)
 map <leader>fe <action>(ActivateProjectToolWindow)
@@ -212,11 +214,11 @@ map <leader>fp <action>(ActivateAndroidProfilerToolWindow)
 map <leader>fc <action>(CommanderPopupMenu)
 
 " Close editors
-"""map <leader>q <action>(CloseContent)
-map <leader>ww <action>(CloseActiveTab)
+map <leader>ww <action>(CloseEditor)
 map <leader>wa <action>(CloseAllEditors)
 map <leader>wo <action>(CloseAllEditorsButActive)
-map <leader>wu <action>(ReopenClosedTab)
+map <leader>wr <action>(ReopenClosedTab)
+map <leader>wu <action>(CloseAllUnmodifiedEditors)
 map <leader>wg <action>(CloseEditorsGroup)
 
 " Select (todo)
