@@ -174,8 +174,12 @@ map <leader>h <action>(HideActiveWindow)
 map <leader>x :NERDTreeToggle<CR>
 
 " Folding
-map <leader>zc :action CollapseAllRegions<CR>
+map <leader>zl :action CollapseAllRegions<CR>
 map <leader>zo :action ExpandAllRegions<CR>
+map <leader>zk <action>(CollapseRegionRecursively)
+map <leader>zi <action>(ExpandRegionRecursively)
+map <leader>zj :action CollapseRegion<CR>
+map <leader>zu :action ExpandRegion<CR>
 
 " Window splits
 map <leader>lv <Action>(SplitVertically)
@@ -210,6 +214,7 @@ map <leader>fr <action>(ReplaceInPath)
 map <leader>ft <action>(ActivateTerminalToolWindow)
 map <leader>fl <action>(ActivateLogcatToolWindow)
 map <leader>fe <action>(ActivateProjectToolWindow)
+map <leader>fo <action>(SelectInProjectView)
 map <leader>fg <action>(ActivateVersionControlToolWindow)
 map <leader>fd <action>(ActivateDebugToolWindow)
 map <leader>ft <action>(ActivateBuildVariantsToolWindow)
