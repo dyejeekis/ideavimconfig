@@ -148,6 +148,9 @@ inoremap <C-k> <Action>(PopupMenu-selectPrev)
 "" Leader commands
 "" ========================================================
 
+" New line
+nnoremap <leader>o o<Esc>
+
 " Join lines
 nnoremap <leader>j J
 
@@ -242,6 +245,8 @@ nmap <leader>gt <Action>(GotoTest)
 nmap <leader>gf <Action>(Back)
 nmap <leader>gb <Action>(Forward)
 
+" New (todo: file, folder, etc)
+
 " Bookmarks
 map <leader>ba <action>(Bookmarks)
 map <leader>bs <action>(ShowBookmarks)
@@ -249,13 +254,13 @@ map <leader>bb <Action>(ToggleBookmark)
 map <leader>bn <Action>(GotoNextBookmark)
 map <leader>bm <Action>(GotoPreviousBookmark)
 
-" Git
-map <leader>gv <Action>(ActivateVersionControlToolWindow)
+" Version control
+map <leader>va <Action>(ActivateVersionControlToolWindow)
 map <leader>gc <Action>(CheckinProject)
-map <leader>gb <Action>(Git.Branches)
-map <leader>gs <Action>(Vcs.Show.Shelf)
-map <leader>gg <Action>(Vcs.RollbackChangedLines)
-map <leader>gr <Action>(Git.Reset)
+map <leader>vb <Action>(Git.Branches)
+map <leader>vs <Action>(Vcs.Show.Shelf)
+map <leader>vv <Action>(Vcs.RollbackChangedLines)
+map <leader>vr <Action>(Git.Reset)
 """map <leader>gd <Action>(ChangesView.Diff)
 
 " Debug
