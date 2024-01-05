@@ -261,7 +261,7 @@ map <leader>bm <Action>(GotoPreviousBookmark)
 
 " Version control
 map <leader>va <Action>(ActivateVersionControlToolWindow)
-map <leader>gc <Action>(CheckinProject)
+map <leader>vc <Action>(CheckinProject)
 map <leader>vb <Action>(Git.Branches)
 map <leader>vs <Action>(Vcs.Show.Shelf)
 map <leader>vv <Action>(Vcs.RollbackChangedLines)
