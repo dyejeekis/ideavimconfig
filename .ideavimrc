@@ -112,16 +112,30 @@ let g:WhichKeyDesc_errors_prev = "<leader>ep Go to previous error in solution"
 "" Key mappings
 "" ========================================================
 
+" Exit insert mode
 inoremap jk <Esc>
 inoremap kj <Esc>
+
+" Move cursor in insert mode
+inoremap <C-h> <left>
+inoremap <C-l> <right>
+inoremap <C-k> <up>
+inoremap <C-j> <down>
+
+" Delete character in insert mode
+inoremap <C-n> <C-h>
 
 " Move up and down
 nnoremap J 5j
 nnoremap K 5k
+vnoremap J 5j
+vnoremap K 5k
 
 " Tab navigation
 nnoremap <C-n> :tabnext<CR>
 nnoremap <C-m> :tabprev<CR>
+vnoremap <C-n> :tabnext<CR>
+vnoremap <C-m> :tabprev<CR>
 
 " Pane navigation
 nnoremap <C-h> <C-w>h
@@ -141,8 +155,8 @@ vnoremap > >gv
 nnoremap qj @q
 
 " Popup navigation
-inoremap <C-j> <Action>(PopupMenu-selectNext)
-inoremap <C-k> <Action>(PopupMenu-selectPrev)
+"""inoremap <C-j> <Action>(PopupMenu-selectNext)
+"""inoremap <C-k> <Action>(PopupMenu-selectPrev)
 
 
 "" Leader commands
