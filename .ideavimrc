@@ -40,6 +40,12 @@ set notimeout
 "" Key mappings
 "" ========================================================
 
+" Move to beginning/end of line
+nnoremap H ^
+nnoremap L $
+vnoremap H ^
+vnoremap L $
+
 " Exit insert mode
 inoremap jk <Esc>
 inoremap kj <Esc>
