@@ -165,7 +165,6 @@ map <leader>fe <action>(ActivateProjectToolWindow)
 map <leader>fo <action>(SelectInProjectView)
 map <leader>fg <action>(ActivateVersionControlToolWindow)
 map <leader>fd <action>(ActivateDebugToolWindow)
-map <leader>ft <action>(ActivateBuildVariantsToolWindow)
 map <leader>fp <action>(ActivateAndroidProfilerToolWindow)
 map <leader>fc <action>(CommanderPopupMenu)
 
