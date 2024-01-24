@@ -102,6 +102,9 @@ nnoremap <leader>o o<Esc>
 " Join lines
 nnoremap <leader>j J
 
+" Split lines
+nnoremap <leadesr>k i<Enter><Esc>k$
+
 " Remove highlight
 map <leader>/ :noh<CR>
 
