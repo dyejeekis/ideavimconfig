@@ -103,7 +103,7 @@ nnoremap <leader>o o<Esc>
 nnoremap <leader>j J
 
 " Split lines
-nnoremap <leadesr>k i<Enter><Esc>k$
+nnoremap <leader>k i<Enter><Esc>k$
 
 " Remove highlight
 map <leader>/ :noh<CR>
