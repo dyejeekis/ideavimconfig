@@ -16,7 +16,7 @@ set incsearch
 set hlsearch
 
 set visualbell
-set ideavimsupport=
+set ideavimsupport = "dialog"
 
 " Use system clipboard
 set clipboard+=unnamed   
