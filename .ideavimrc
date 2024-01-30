@@ -40,6 +40,9 @@ set notimeout
 "" Key mappings
 "" ========================================================
 
+" Redo
+nnoremap <C-r> U
+
 " Move to beginning/end of line
 nnoremap H ^
 nnoremap L $
