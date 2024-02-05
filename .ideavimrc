@@ -40,8 +40,11 @@ set notimeout
 "" Key mappings
 "" ========================================================
 
+" Close active editor
+nmap <C-w> <action>(CloseEditor)
+
 " Redo
-nnoremap <C-r> U
+nnoremap U <C-r>
 
 " Move to beginning/end of line
 nnoremap H ^
