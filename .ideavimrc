@@ -62,8 +62,11 @@ inoremap <C-l> <right>
 inoremap <C-k> <up>
 inoremap <C-j> <down>
 
-" Delete character in insert mode
+" Delete character backwards in insert mode
 inoremap <C-n> <C-h>
+
+" Delete character forwards in insert mode
+inoremap <C-m> <Del>
 
 " Move up and down
 nnoremap J 5j
@@ -104,6 +107,7 @@ nnoremap qj @q
 
 " New line
 nnoremap <leader>o o<Esc>
+nnoremap <leader>O O<Esc>
 
 " Join lines
 nnoremap <leader>j J
