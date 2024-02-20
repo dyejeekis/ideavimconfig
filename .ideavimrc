@@ -47,10 +47,10 @@ nmap <C-w> <action>(CloseEditor)
 nnoremap U <C-r>
 
 " Move to beginning/end of line
-nnoremap H ^
-nnoremap L $
-vnoremap H ^
-vnoremap L $
+nnoremap <C-h> ^
+nnoremap <C-l> $
+vnoremap <C-h> ^
+vnoremap <C-l> $
 
 " Exit insert mode
 inoremap jk <Esc>
@@ -68,11 +68,27 @@ inoremap <C-n> <C-h>
 " Delete character forwards in insert mode
 inoremap <C-m> <Del>
 
-" Move up and down
+" Move up and down by x lines
 nnoremap J 5j
 nnoremap K 5k
 vnoremap J 5j
 vnoremap K 5k
+
+" Move left and right by x words
+nnoremap H 2b
+nnoremap L 2w
+vnoremap H 2b
+vnoremap L 2w
+
+" Scroll up and down
+nnoremap <C-j> <C-d>
+nnoremap <C-k> <C-u>
+nnoremap <C-d> <C-f>
+nnoremap <C-f> <C-b>
+vnoremap <C-j> <C-d>
+vnoremap <C-k> <C-u>
+vnoremap <C-d> <C-f>
+vnoremap <C-f> <C-b>
 
 " Tab navigation
 nnoremap <C-n> :tabnext<CR>
@@ -80,11 +96,17 @@ nnoremap <C-m> :tabprev<CR>
 vnoremap <C-n> :tabnext<CR>
 vnoremap <C-m> :tabprev<CR>
 
-" Pane navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
-nnoremap <C-k> <C-w>k
-nnoremap <C-j> <C-w>j
+" Move between splits
+nnoremap <C-u>
+nnoremap <C-u>h <C-w>h
+nnoremap <C-u>l <C-w>l
+nnoremap <C-u>k <C-w>k
+nnoremap <C-u>j <C-w>j
+vnoremap <C-u>
+vnoremap <C-u>h <C-w>h
+vnoremap <C-u>l <C-w>l
+vnoremap <C-u>k <C-w>k
+vnoremap <C-u>j <C-w>j
 
 " Jump between methods
 nnoremap [[ <Action>(MethodUp)
