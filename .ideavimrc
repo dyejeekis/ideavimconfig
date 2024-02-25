@@ -91,10 +91,10 @@ vnoremap <C-d> <C-f>
 vnoremap <C-f> <C-b>
 
 " Tab navigation
-nnoremap <C-m> :tabnext<CR>
-nnoremap <C-n> :tabprev<CR>
-vnoremap <C-m> :tabnext<CR>
-vnoremap <C-n> :tabprev<CR>
+nnoremap <C-n> :tabnext<CR>
+nnoremap <C-m> :tabprev<CR>
+vnoremap <C-n> :tabnext<CR>
+vnoremap <C-m> :tabprev<CR>
 
 " Move between splits
 nnoremap <C-u>
