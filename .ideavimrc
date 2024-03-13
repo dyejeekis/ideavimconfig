@@ -171,11 +171,11 @@ map <leader>lu <Action>(Unsplit)
 map <leader>lm <Action>(MoveEditorToOppositeTabGroup)
 
 " Display options
-map <leader>dd <action>(ToggleDistractionFreeMode)
-map <leader>de <action>(ToggleZenMode)
-map <leader>df <action>(ToggleFullScreen)
+map <leader>md <action>(ToggleDistractionFreeMode)
+map <leader>me <action>(ToggleZenMode)
+map <leader>mf <action>(ToggleFullScreen)
 " todo: find correct action
-" map <leader>ds <action>(ToggleSidebarVisibility)
+" map <leader>ms <action>(ToggleSidebarVisibility)
 
 " Actions (todo, like run debug etc)
 map <leader>am <action>(ShowIntentionActions)
