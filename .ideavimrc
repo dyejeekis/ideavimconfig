@@ -16,7 +16,7 @@ set incsearch
 set hlsearch
 
 set visualbell
-set ideavimsupport = "dialog"
+set ideavimsupport=
 
 " Use system clipboard
 set clipboard+=unnamed   
@@ -41,7 +41,8 @@ set notimeout
 "" ========================================================
 
 " Close active editor
-nmap <C-w> <action>(CloseEditor)
+nmap <C-w>c <action>(CloseEditor)
+nmap <C-w>o <action>(CloseAllEditorsButActive)
 
 " Redo
 nnoremap U <C-r>
@@ -92,21 +93,9 @@ vnoremap <C-f> <C-b>
 
 " Tab navigation
 nnoremap <C-n> :tabnext<CR>
-nnoremap <C-m> :tabprev<CR>
+nnoremap <C-b> :tabprev<CR>
 vnoremap <C-n> :tabnext<CR>
-vnoremap <C-m> :tabprev<CR>
-
-" Move between splits
-nnoremap <C-u>
-nnoremap <C-u>h <C-w>h
-nnoremap <C-u>l <C-w>l
-nnoremap <C-u>k <C-w>k
-nnoremap <C-u>j <C-w>j
-vnoremap <C-u>
-vnoremap <C-u>h <C-w>h
-vnoremap <C-u>l <C-w>l
-vnoremap <C-u>k <C-w>k
-vnoremap <C-u>j <C-w>j
+vnoremap <C-b> :tabprev<CR>
 
 " Jump between methods
 nnoremap [[ <Action>(MethodUp)
@@ -147,8 +136,10 @@ map <leader>' :reg<CR>
 map <leader>c <action>(CommentByLineComment)
 map <leader>C <action>(CommentByBlockComment)
 
-" Hide window
-map <leader>h <action>(HideActiveWindow)
+" Hide panel or window
+map <leader>ha <action>(HideAllWindows)
+map <leader>hs <action>(HideSideWindows)
+map <leader>hi <action>(HideActiveWindow)
 
 " Jump around with easymotion
 """map <leader>j <Plug>(easymotion-s)
@@ -172,7 +163,7 @@ map <leader>lm <Action>(MoveEditorToOppositeTabGroup)
 
 " Display options
 map <leader>md <action>(ToggleDistractionFreeMode)
-map <leader>me <action>(ToggleZenMode)
+map <leader>mz <action>(ToggleZenMode)
 map <leader>mf <action>(ToggleFullScreen)
 " todo: find correct action
 " map <leader>ms <action>(ToggleSidebarVisibility)
@@ -200,10 +191,12 @@ map <leader>ft <action>(ActivateTerminalToolWindow)
 map <leader>fl <action>(ActivateLogcatToolWindow)
 map <leader>fe <action>(ActivateProjectToolWindow)
 map <leader>fo <action>(SelectInProjectView)
-map <leader>fg <action>(ActivateVersionControlToolWindow)
+map <leader>fg <action>(ActivateCommitToolWindow)
+map <leader>fv <action>(ActivateVersionControlToolWindow)
 map <leader>fd <action>(ActivateDebugToolWindow)
 map <leader>fp <action>(ActivateAndroidProfilerToolWindow)
-map <leader>fc <action>(CommanderPopupMenu)
+map <leader>fb <action>(ActivateBuildVariantsToolWindow)
+map <leader>fn <action>(ActivateNotificationsToolWindow)
 
 " Close editors
 map <leader>ww <action>(CloseEditor)
@@ -243,14 +236,16 @@ map <leader>bb <Action>(ToggleBookmark)
 map <leader>bn <Action>(GotoNextBookmark)
 map <leader>bm <Action>(GotoPreviousBookmark)
 
-" Version control
+" Version control (git)
 map <leader>va <Action>(ActivateVersionControlToolWindow)
 map <leader>vc <Action>(CheckinProject)
 map <leader>vb <Action>(Git.Branches)
 map <leader>vs <Action>(Vcs.Show.Shelf)
+" todo: find correct actions
+map <leader>vh <Action>(Vcs.ShowHistoryForRevision)
+map <leader>vc <Action>(Git.ShowDiff)
 map <leader>vv <Action>(Vcs.RollbackChangedLines)
 map <leader>vr <Action>(Git.Reset)
-"""map <leader>gd <Action>(ChangesView.Diff)
 
 " Debug
 map <leader>dd <Action>(ToggleLineBreakpoint)
