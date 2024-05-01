@@ -165,8 +165,6 @@ map <leader>lm <Action>(MoveEditorToOppositeTabGroup)
 map <leader>md <action>(ToggleDistractionFreeMode)
 map <leader>mz <action>(ToggleZenMode)
 map <leader>mf <action>(ToggleFullScreen)
-" todo: find correct action
-" map <leader>ms <action>(ToggleSidebarVisibility)
 
 " Actions (todo, like run debug etc)
 map <leader>am <action>(ShowIntentionActions)
