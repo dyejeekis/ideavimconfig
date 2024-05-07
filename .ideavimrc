@@ -29,11 +29,11 @@ let mapleader = " "
 
 set surround
 set highlightedyank
-###set sneak
+"set sneak
 set nerdtree
 
 " Easymotion settings
-###set easymotion
+"set easymotion
 set notimeout
 
 
@@ -43,6 +43,7 @@ set notimeout
 " Close active editor
 nmap <C-w>c <action>(CloseEditor)
 nmap <C-w>o <action>(CloseAllEditorsButActive)
+nmap <C-w>r <action>(ReopenClosedTab)
 
 " Redo
 nnoremap U <C-r>
@@ -93,9 +94,7 @@ vnoremap <C-f> <C-b>
 
 " Tab navigation
 nnoremap <C-n> :tabnext<CR>
-nnoremap <C-b> :tabprev<CR>
-vnoremap <C-n> :tabnext<CR>
-vnoremap <C-b> :tabprev<CR>
+nnoremap <C-p> :tabprev<CR>
 
 " Jump between methods
 nnoremap [[ <Action>(MethodUp)
@@ -109,12 +108,8 @@ vnoremap > >gv
 nnoremap qj @q
 
 " Popup navigation
-"""inoremap <C-j> <Action>(PopupMenu-selectNext)
-"""inoremap <C-k> <Action>(PopupMenu-selectPrev)
-
-
-"" Leader commands
-"" ========================================================
+"inoremap <C-n> <Action>(PopupMenu-selectNext)
+"inoremap <C-p> <Action>(PopupMenu-selectPrev)
 
 " New line
 nnoremap <leader>o o<Esc>
@@ -167,31 +162,29 @@ map <leader>mz <action>(ToggleZenMode)
 map <leader>mf <action>(ToggleFullScreen)
 
 " Actions (todo, like run debug etc)
-map <leader>am <action>(ShowIntentionActions)
-map <leader>as <action>(SearchEverywhere)
+map <leader>ai <action>(ShowIntentionActions)
 map <leader>ar <action>(Run)
-map <leader>ad <action>(Debug)
+map <leader>ab <action>(Debug)
 map <leader>ap <action>(Stop)
+map <leader>ay <action>(Android.SyncProject)
 
-" File navigation
-map <leader>ef <action>(GotoFile)
-map <leader>er <action>(RecentFiles)
-map <leader>ec <action>(FindInPath)
-map <leader><leader> <Action>(RecentFiles)
-map <leader>el <action>(RecentLocations)
-map <leader>es <action>(NewScratchFile)
+" Search
+map <leader>sf <action>(SearchEverywhere)
+map <leader>ss <action>(FindInPath)
+map <leader>sr <action>(ReplaceInPath)
 
 " Focus window
-map <leader>fs <action>(SearchEverywhere)
-map <leader>ff <action>(FindInPath)
-map <leader>fr <action>(ReplaceInPath)
+map <leader><leader> <Action>(RecentFiles)
+map <leader>; <action>(GotoFile)
+map <leader>p <action>(GotoAction)
+map <leader>fr <action>(RecentLocations)
 map <leader>ft <action>(ActivateTerminalToolWindow)
 map <leader>fl <action>(ActivateLogcatToolWindow)
 map <leader>fe <action>(ActivateProjectToolWindow)
 map <leader>fo <action>(SelectInProjectView)
-map <leader>fg <action>(ActivateCommitToolWindow)
+map <leader>fd <action>(ActivateCommitToolWindow)
 map <leader>fv <action>(ActivateVersionControlToolWindow)
-map <leader>fd <action>(ActivateDebugToolWindow)
+map <leader>fb <action>(ActivateDebugToolWindow)
 map <leader>fp <action>(ActivateAndroidProfilerToolWindow)
 map <leader>fb <action>(ActivateBuildVariantsToolWindow)
 map <leader>fn <action>(ActivateNotificationsToolWindow)
@@ -235,15 +228,13 @@ map <leader>bn <Action>(GotoNextBookmark)
 map <leader>bm <Action>(GotoPreviousBookmark)
 
 " Version control (git)
-map <leader>va <Action>(ActivateVersionControlToolWindow)
-map <leader>vc <Action>(CheckinProject)
+map <leader>va <Action>(VcsToolbarActions)
+map <leader>vv <Action>(VcsShowCurrentChangeMarker)
+map <leader>vn <Action>(VcsShowNextChangeMarker)
+map <leader>vp <Action>(VcsShowPrevChangeMarker)
 map <leader>vb <Action>(Git.Branches)
-map <leader>vs <Action>(Vcs.Show.Shelf)
-" todo: find correct actions
-map <leader>vh <Action>(Vcs.ShowHistoryForRevision)
-map <leader>vc <Action>(Git.ShowDiff)
-map <leader>vv <Action>(Vcs.RollbackChangedLines)
-map <leader>vr <Action>(Git.Reset)
+"map <leader>vd <Action>(ChangesView.Commit)
+"map <leader>vs <Action>(Vcs.Show.Shelf)
 
 " Debug
 map <leader>dd <Action>(ToggleLineBreakpoint)
