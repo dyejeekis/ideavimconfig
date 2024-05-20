@@ -189,17 +189,6 @@ map <leader>fp <action>(ActivateAndroidProfilerToolWindow)
 map <leader>fb <action>(ActivateBuildVariantsToolWindow)
 map <leader>fn <action>(ActivateNotificationsToolWindow)
 
-" Close editors
-map <leader>ww <action>(CloseEditor)
-map <leader>wa <action>(CloseAllEditors)
-map <leader>wo <action>(CloseAllEditorsButActive)
-map <leader>wr <action>(ReopenClosedTab)
-map <leader>wu <action>(CloseAllUnmodifiedEditors)
-map <leader>wg <action>(CloseEditorsGroup)
-
-" Select (todo)
-"""map <leader>sa <action>()
-
 " Refactor
 map <leader>rn <Action>(RenameElement)
 map <leader>rm <Action>(ExtractMethod)
@@ -232,6 +221,7 @@ map <leader>va <Action>(VcsToolbarActions)
 map <leader>vv <Action>(VcsShowCurrentChangeMarker)
 map <leader>vn <Action>(VcsShowNextChangeMarker)
 map <leader>vp <Action>(VcsShowPrevChangeMarker)
+map <leader>vr <Action>(Vcs.RollbackChangedLines)
 map <leader>vb <Action>(Git.Branches)
 "map <leader>vd <Action>(ChangesView.Commit)
 "map <leader>vs <Action>(Vcs.Show.Shelf)
